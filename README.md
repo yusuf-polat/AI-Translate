@@ -245,7 +245,7 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 ### 👨‍💻 **Yusuf Polat**
 
 [![GitHub](https://img.shields.io/badge/GitHub-yusuf--polat-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yusuf-polat)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yusuf-polat)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/theyusufpolat/)
 [![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:contact@yusufpolat.dev)
 
 ---
