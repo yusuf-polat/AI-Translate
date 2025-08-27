@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Google Play Store Çeviri Asistanı",
+  "version": "1.0",
+  "description": "Google Play Console'da otomatik çeviri işlemleri için AI destekli asistan",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "contextMenus",
+    "scripting",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "https://play.google.com/*",
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://play.google.com/console/*"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "action": {
+    "default_title": "Google Play Store Çeviri Asistanı"
+  },
+  "side_panel": {
+    "default_path": "side_panel.html"
+  }
+}

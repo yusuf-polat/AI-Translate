@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Play Çeviri Asistanı</title>
+    <link rel="stylesheet" href="side_panel.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Google Play Store Çeviri Asistanı</h1>
+            <p>AI destekli otomatik Google Play Store çeviri işlemleri</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="settings">Ayarlar</button>
+            <button class="tab-button" data-tab="auto">Otomatik Bot</button>
+        </div>
+
+        <!-- Ayarlar Tab -->
+        <div class="tab-content active" id="settings-tab">
+            <div class="form-group">
+                <label for="apiKey">Gemini API Anahtarı:</label>
+                <input type="password" id="apiKey" placeholder="API anahtarınızı girin">
+                <button id="testApiKey" class="btn-secondary">Test Et</button>
+            </div>
+            <div class="form-group">
+                <label for="appName">Uygulama Adı * (max 30 karakter):</label>
+                <input type="text" id="appName" maxlength="30" placeholder="Uygulamanızın adını girin">
+                <div class="char-counter">
+                    <span id="appNameCounter">0</span> / 30
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="shortDescription">Kısa Açıklama * (max 80 karakter):</label>
+                <textarea id="shortDescription" maxlength="80" placeholder="Kısa açıklamanızı girin"></textarea>
+                <div class="char-counter">
+                    <span id="shortDescCounter">0</span> / 80
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="fullDescription">Tam Açıklama * (max 4000 karakter):</label>
+                <textarea id="fullDescription" maxlength="4000" placeholder="Tam açıklamanızı girin"></textarea>
+                <div class="char-counter">
+                    <span id="fullDescCounter">0</span> / 4000
+                </div>
+            </div>
+            <button id="saveSettings" class="btn-primary">Ayarları Kaydet</button>
+        </div>
+
+        <!-- Otomatik Bot Tab -->
+        <div class="tab-content" id="auto-tab">
+            <div class="info-box">
+                <h3>🤖 Otomatik Bot Nasıl Çalışır?</h3>
+                <ol>
+                    <li>Google Play Console'da çeviri sayfasına gidin</li>
+                    <li>"Bot'u Başlat" butonuna tıklayın</li>
+                    <li>Bot otomatik olarak tüm dilleri dolaşacak</li>
+                    <li>Her dil için çevirileri yapıp "Uygula" butonuna tıklayacak</li>
+                    <li>İşlem tamamlandığında bildirim alacaksınız</li>
+                </ol>
+            </div>
+            <div class="form-group">
+                <label for="botStatus">Bot Durumu:</label>
+                <div id="botStatus" class="status-display">
+                    <span class="status-text">Hazır</span>
+                    <div class="progress-bar" style="display: none;">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="processedLanguages">İşlenen Diller:</label>
+                <div id="processedLanguages" class="languages-list">
+                    Henüz işlem başlamadı
+                </div>
+            </div>
+            <button id="startBot" class="btn-primary">🤖 Bot'u Başlat</button>
+            <button id="stopBot" class="btn-secondary" style="display: none;">⏹️ Bot'u Durdur</button>
+        </div>
+
+        <div id="status" class="status"></div>
+    </div>
+
+    <script src="side_panel.js"></script>
+</body>
+</html>
